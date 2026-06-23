@@ -1,0 +1,12 @@
+/* ============================================================
+   Contact
+   ============================================================ */
+
+.section--contact { text-align: center; }
+.contact { max-width: 680px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; }
+.contact .section__index { margin-bottom: 14px; }
+.contact__title { font-family: var(--display); font-weight: 700; font-size: clamp(2rem, 5.5vw, 3.4rem); line-height: 1.1; letter-spacing: -0.03em; margin-bottom: 20px; }
+.contact__lead { color: var(--text-dim); font-size: 1.08rem; margin-bottom: 36px; max-width: 520px; }
+.contact__links { display: flex; flex-wrap: wrap; gap: 28px; margin-top: 34px; }
+.contact__links a { color: var(--text-dim); font-size: 0.95rem; position: relative; transition: color .2s; }
+.contact__links a:hover { color: var(--accent); }

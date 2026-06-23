@@ -1,0 +1,16 @@
+/* ============================================================
+   Projects
+   ============================================================ */
+
+.projects { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.project { display: flex; flex-direction: column; padding: 26px; border: 1px solid var(--border); border-radius: 18px; background: var(--surface); position: relative; overflow: hidden; transition: transform .3s var(--ease), border-color .3s; }
+.project::before { content: ""; position: absolute; inset: 0; background: radial-gradient(400px circle at var(--mx,50%) var(--my,0%), rgba(34,211,238,0.10), transparent 45%); opacity: 0; transition: opacity .3s; }
+.project:hover { transform: translateY(-6px); border-color: var(--border-2); }
+.project:hover::before { opacity: 1; }
+.project__top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 18px; }
+.project__icon { font-size: 1.8rem; }
+.project__arrow { color: var(--text-mute); font-size: 1.2rem; transition: transform .25s var(--ease), color .25s; }
+.project:hover .project__arrow { transform: translate(3px, -3px); color: var(--accent); }
+.project h3 { font-family: var(--display); font-size: 1.18rem; margin-bottom: 10px; letter-spacing: -0.01em; }
+.project p { color: var(--text-dim); font-size: 0.92rem; margin-bottom: 18px; flex: 1; }
+.projects__more { text-align: center; margin-top: 40px; }

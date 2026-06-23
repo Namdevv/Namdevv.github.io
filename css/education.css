@@ -1,0 +1,14 @@
+/* ============================================================
+   Education & certifications
+   ============================================================ */
+
+.edu { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+.edu__card { padding: 30px; border: 1px solid var(--border); border-radius: 18px; background: var(--surface); transition: border-color .3s, transform .3s var(--ease); }
+.edu__card:hover { border-color: var(--border-2); transform: translateY(-4px); }
+.edu__icon { font-size: 2rem; display: block; margin-bottom: 14px; }
+.edu__card h3 { font-family: var(--display); font-size: 1.2rem; margin-bottom: 8px; }
+.edu__sub { color: var(--text-dim); font-size: 0.95rem; }
+.edu__list { list-style: none; display: grid; gap: 12px; margin-top: 4px; }
+.edu__list li { color: var(--text-dim); font-size: 0.95rem; padding-left: 18px; position: relative; }
+.edu__list li::before { content: "✦"; position: absolute; left: 0; color: var(--accent); }
+.edu__list em { color: var(--text-mute); font-style: normal; }

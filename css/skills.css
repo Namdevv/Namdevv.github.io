@@ -1,0 +1,12 @@
+/* ============================================================
+   Skills
+   ============================================================ */
+
+.skills { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; }
+.skill-group { padding: 28px; border: 1px solid var(--border); border-radius: 16px; background: var(--surface); transition: border-color .3s, transform .3s var(--ease), background .3s; }
+.skill-group:hover { border-color: var(--border-2); transform: translateY(-4px); background: var(--surface-2); }
+.skill-group h3 { font-family: var(--display); font-size: 1.05rem; margin-bottom: 18px; color: var(--text); }
+.tags { display: flex; flex-wrap: wrap; gap: 9px; }
+.tags span { padding: 7px 14px; border-radius: 999px; font-size: 0.85rem; color: var(--text-dim); background: rgba(255,255,255,0.04); border: 1px solid var(--border); transition: .2s; }
+.tags span:hover { color: #fff; border-color: var(--accent); background: rgba(34,211,238,0.08); }
+.tags--sm span { padding: 5px 11px; font-size: 0.78rem; }
