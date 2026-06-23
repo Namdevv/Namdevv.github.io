@@ -1,9 +1,344 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Nam Tran (Tran Bac Nam) — AI Engineer & Architect specializing in LLM, vLLM, RAG, agentic AI and MLOps, with a strong data & business-analysis foundation." />
+  <meta name="author" content="Nam Tran" />
+
+  <!-- Open Graph / social preview -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Nam Tran — AI Engineer & Architect" />
+  <meta property="og:description" content="Building production-grade AI systems — LLM, vLLM, RAG, agentic AI, MLOps." />
+  <meta property="og:url" content="https://namdevv.github.io" />
+
+  <title>Nam Tran — AI Engineer & Architect</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧠</text></svg>" />
 </head>
 <body>
-    <h1>Chào thế giới! Đây là trang web của tôi.</h1>
+  <!-- Animated gradient background -->
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="bg-glow glow-1" aria-hidden="true"></div>
+  <div class="bg-glow glow-2" aria-hidden="true"></div>
+
+  <!-- Navigation -->
+  <header class="nav" id="nav">
+    <a href="#home" class="nav__logo">
+      <span class="nav__logo-mark">N</span>
+      <span class="nav__logo-text">namtran</span>
+    </a>
+    <nav class="nav__links" aria-label="Primary">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="#contact" class="btn btn--sm nav__cta">Let's talk</a>
+    <button class="nav__burger" id="burger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" id="home">
+      <div class="hero__grid">
+      <div class="hero__inner reveal">
+        <p class="hero__eyebrow">
+          <span class="status-dot"></span> Available for AI / ML opportunities
+        </p>
+        <h1 class="hero__title">
+          Hi, I'm <span class="grad-text">Nam Tran</span>.<br />
+          I build <span id="typed" class="typed"></span>
+        </h1>
+        <p class="hero__lead">
+          AI Engineer &amp; Architect who turns research into production — large
+          language models, <strong>vLLM</strong> serving, <strong>RAG</strong> and
+          <strong>agentic AI</strong>, backed by a solid <strong>data</strong> and
+          <strong>business-analysis</strong> foundation. I bring intelligence into
+          everyday life.
+        </p>
+        <div class="hero__actions">
+          <a href="#projects" class="btn btn--primary">View my work</a>
+          <a href="https://github.com/Namdevv" target="_blank" rel="noopener" class="btn btn--ghost">
+            GitHub <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+        <div class="hero__stats">
+          <div class="stat"><span class="stat__num" data-count="4">0</span><span class="stat__label">Professional roles</span></div>
+          <div class="stat"><span class="stat__num" data-count="90" data-suffix="%">0</span><span class="stat__label">Manual errors cut</span></div>
+          <div class="stat"><span class="stat__num" data-count="40" data-suffix="%">0</span><span class="stat__label">Faster operations</span></div>
+        </div>
+      </div>
+      <div class="hero__photo reveal">
+        <div class="hero__photo-ring">
+          <img src="assets/profile.png" alt="Tran Bac Nam — AI Engineer"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='grid';" />
+          <div class="hero__photo-fallback" style="display:none">NT</div>
+        </div>
+        <span class="hero__photo-badge"><span class="status-dot"></span> AI Engineer &amp; Architect</span>
+      </div>
+      </div>
+      <a href="#about" class="hero__scroll" aria-label="Scroll down">
+        <span></span>
+      </a>
+    </section>
+
+    <!-- About -->
+    <section class="section" id="about">
+      <div class="section__head reveal">
+        <span class="section__index">01</span>
+        <h2 class="section__title">About me</h2>
+      </div>
+      <div class="about reveal">
+        <div class="about__text">
+          <p>
+            I'm <strong>Tran Bac Nam</strong> — an AI Engineer and Architect studying
+            Artificial Intelligence at <strong>FPT University, HCM</strong>. I love the
+            full arc of a model's life, from a messy notebook to a hardened service
+            answering real users.
+          </p>
+          <p>
+            My work sits where deep learning meets solid engineering and clear product
+            thinking. I design <strong>agentic AI</strong> systems, serve
+            <strong>LLMs</strong> with <strong>vLLM</strong>, ground them with
+            <strong>RAG</strong>, and translate fuzzy business needs into precise
+            software requirements — having cut manual errors by 90% and operations time
+            by 40% on real projects.
+          </p>
+          <p>
+            I'm equally at home with <strong>data</strong> (pipelines, Big Data,
+            dashboards) and <strong>business analysis</strong> (SRS, BPMN, UAT). I share
+            what I learn on
+            <a href="https://viblo.asia/u/namtran09" target="_blank" rel="noopener">Viblo</a>.
+          </p>
+          <ul class="about__facts">
+            <li><span>Role</span>AI Engineer &amp; Architect</li>
+            <li><span>Focus</span>LLM · RAG · Agentic AI</li>
+            <li><span>Also</span>Data &amp; Business Analysis</li>
+            <li><span>Based in</span>Ho Chi Minh City 🇻🇳</li>
+          </ul>
+        </div>
+        <aside class="about__card">
+          <div class="codecard">
+            <div class="codecard__bar">
+              <span></span><span></span><span></span>
+              <em>engineer.py</em>
+            </div>
+            <pre class="codecard__body"><code><span class="c-key">class</span> <span class="c-cls">AIEngineer</span>:
+    <span class="c-fn">def</span> <span class="c-fn2">__init__</span>(<span class="c-arg">self</span>):
+        <span class="c-arg">self</span>.name   = <span class="c-str">"Tran Bac Nam"</span>
+        <span class="c-arg">self</span>.role   = <span class="c-str">"AI Engineer"</span>
+        <span class="c-arg">self</span>.stack  = [<span class="c-str">"LLM"</span>, <span class="c-str">"vLLM"</span>,
+                       <span class="c-str">"RAG"</span>, <span class="c-str">"MLOps"</span>]
+        <span class="c-arg">self</span>.also   = [<span class="c-str">"Data"</span>, <span class="c-str">"BA"</span>]
+        <span class="c-arg">self</span>.mantra = (
+          <span class="c-str">"ship AI into real life"</span>
+        )
+
+    <span class="c-fn">def</span> <span class="c-fn2">build</span>(<span class="c-arg">self</span>, idea):
+        <span class="c-key">return</span> production(idea)</code></pre>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section class="section" id="experience">
+      <div class="section__head reveal">
+        <span class="section__index">02</span>
+        <h2 class="section__title">Experience</h2>
+      </div>
+      <div class="timeline">
+
+        <article class="tl reveal">
+          <div class="tl__dot"></div>
+          <div class="tl__body">
+            <div class="tl__head">
+              <h3>AI Architect</h3>
+              <span class="tl__date">Jan 2026 — Present</span>
+            </div>
+            <p class="tl__org">DFM Engineering · <em>Agentic AI for 3D CAD Automation</em></p>
+            <ul class="tl__points">
+              <li>Gathered business requirements across departments and designed a comprehensive integration architecture unifying multi-platform data flows into a single admin console.</li>
+              <li>Modeled end-to-end workflows and decomposed technical scope into concrete software requirements — cutting operational time by <strong>40%</strong>.</li>
+              <li>Partnered with PM and domain engineers on test scenarios, UAT, and hands-on technical support through delivery.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="tl reveal">
+          <div class="tl__dot"></div>
+          <div class="tl__body">
+            <div class="tl__head">
+              <h3>Project Manager / AI</h3>
+              <span class="tl__date">Sep 2025 — Dec 2025</span>
+            </div>
+            <p class="tl__org">FPT University · <em>Agent Programmatic Integration Testing</em></p>
+            <ul class="tl__points">
+              <li>Owned delivery progress and output quality; the single point of contact translating system requirements and status to stakeholders (PM, Dev, QC).</li>
+              <li>Designed the tool-calling architecture and API integration flow, automating data aggregation and reducing manual-operation errors by <strong>90%</strong>.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="tl reveal">
+          <div class="tl__dot"></div>
+          <div class="tl__body">
+            <div class="tl__head">
+              <h3>AI Team Lead</h3>
+              <span class="tl__date">Jan 2025 — Apr 2025</span>
+            </div>
+            <p class="tl__org">CEH — Vietnam Maritime Port Solutions · <em>Hazard Detection System</em></p>
+            <ul class="tl__points">
+              <li>Designed a real-time image/video data-collection pipeline for safety monitoring in complex industrial environments.</li>
+              <li>Surveyed the site, clarified real-world requirements, configured and trialed the system, and validated input/output accuracy before handover.</li>
+              <li>Handled technical incidents to keep data collection running reliably under all conditions.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="tl reveal">
+          <div class="tl__dot"></div>
+          <div class="tl__body">
+            <div class="tl__head">
+              <h3>AI Engineer</h3>
+              <span class="tl__date">Apr 2024 — Apr 2025</span>
+            </div>
+            <p class="tl__org">University of Transport HCMC · <em>Traffic Sign Recognition with LoRA</em></p>
+            <ul class="tl__points">
+              <li>Collected, cleaned, and analyzed large datasets to optimize real-world recognition.</li>
+              <li>Applied optimization techniques to push model accuracy well above baseline.</li>
+              <li>🏆 <strong>2nd Prize</strong>, university-level Scientific Research competition.</li>
+            </ul>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="section" id="skills">
+      <div class="section__head reveal">
+        <span class="section__index">03</span>
+        <h2 class="section__title">Skills &amp; tools</h2>
+      </div>
+      <div class="skills">
+        <article class="skill-group reveal">
+          <h3>AI / ML</h3>
+          <div class="tags">
+            <span>PyTorch</span><span>TensorFlow</span><span>LLM</span><span>vLLM</span>
+            <span>RAG</span><span>LoRA</span><span>Prompt Engineering</span>
+            <span>Agentic AI</span><span>Computer Vision</span><span>OpenCV</span><span>MLOps</span>
+          </div>
+        </article>
+        <article class="skill-group reveal">
+          <h3>Data &amp; Analytics</h3>
+          <div class="tags">
+            <span>Python</span><span>Pandas</span><span>NumPy</span><span>SQL</span>
+            <span>NoSQL</span><span>Big Data</span><span>Power BI</span>
+            <span>Tableau</span><span>Data Pipelines</span>
+          </div>
+        </article>
+        <article class="skill-group reveal">
+          <h3>Business Analysis</h3>
+          <div class="tags">
+            <span>SRS / URD</span><span>BPMN</span><span>DFD</span><span>Flowcharts</span>
+            <span>Use Cases</span><span>User Stories</span><span>UAT</span>
+          </div>
+        </article>
+        <article class="skill-group reveal">
+          <h3>Engineering &amp; Tools</h3>
+          <div class="tags">
+            <span>FastAPI</span><span>REST API</span><span>Docker</span><span>Nginx</span>
+            <span>n8n</span><span>Git</span><span>Jira</span><span>Figma</span>
+            <span>ClickUp</span><span>Draw.io</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="section" id="projects">
+      <div class="section__head reveal">
+        <span class="section__index">04</span>
+        <h2 class="section__title">Featured projects</h2>
+      </div>
+      <!-- Cards are generated from the PROJECTS array in script.js -->
+      <div class="projects" id="projects-grid"></div>
+      <div class="projects__more reveal">
+        <a href="https://github.com/Namdevv?tab=repositories" target="_blank" rel="noopener" class="btn btn--ghost">
+          See all 26 repositories <span aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Education & Certifications -->
+    <section class="section" id="education">
+      <div class="section__head reveal">
+        <span class="section__index">05</span>
+        <h2 class="section__title">Education &amp; certifications</h2>
+      </div>
+      <div class="edu">
+        <article class="edu__card reveal">
+          <span class="edu__icon">🎓</span>
+          <h3>FPT University, HCM</h3>
+          <p class="edu__sub">B.E. in Information Technology — Artificial Intelligence major</p>
+        </article>
+        <article class="edu__card reveal">
+          <span class="edu__icon">📜</span>
+          <h3>Certifications</h3>
+          <ul class="edu__list">
+            <li>Project Management Principles &amp; Practices — <em>UC Irvine</em></li>
+            <li>Big Data — <em>UC San Diego</em></li>
+            <li>AI Enterprise Workflow — <em>IBM</em></li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section section--contact" id="contact">
+      <div class="contact reveal">
+        <span class="section__index">06</span>
+        <h2 class="contact__title">Let's build something <span class="grad-text">intelligent</span>.</h2>
+        <p class="contact__lead">
+          Open to AI / ML roles, collaborations, and interesting problems.
+          The fastest way to reach me is email.
+        </p>
+        <a href="mailto:tranbacnam.2412@gmail.com" class="btn btn--primary btn--lg">
+          tranbacnam.2412@gmail.com
+        </a>
+        <div class="contact__links">
+          <a href="https://github.com/Namdevv" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://viblo.asia/u/namtran09" target="_blank" rel="noopener">Viblo</a>
+          <a href="tel:+84946744287">+84 946 744 287</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Project detail modal (filled by script.js) -->
+  <div class="modal" id="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal__backdrop" data-close></div>
+    <div class="modal__panel" role="document">
+      <button class="modal__close" id="modal-close" aria-label="Close" data-close>×</button>
+      <div class="modal__inner" id="modal-inner"><!-- injected --></div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Tran Bac Nam · Built with care &amp; a lot of coffee ☕</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
