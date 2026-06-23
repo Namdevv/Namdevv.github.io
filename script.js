@@ -3,84 +3,65 @@
    ============================================================ */
 
 /* ------------------------------------------------------------------
-   PROJECTS  —  EDIT HERE to manage your portfolio.
-   Each project shows only its name on the main page; clicking
+   EXPERIENCE  —  EDIT HERE to manage your work history.
+   Each entry shows only role + company + date on the page; clicking
    "View details" opens a popup with the full description + images.
 
-   To add images for a project:
-     1. Put image files in:  assets/projects/<anything>/
+   To add images / proof (certificates, screenshots) for a role:
+     1. Put image files in:  assets/experience/<anything>/
      2. List their paths in the `images: [...]` array below.
    Leave `images: []` for now — the popup shows a clean placeholder.
    ------------------------------------------------------------------ */
-var PROJECTS = [
+var EXPERIENCE = [
   {
-    title: "claude-mouse-mcp",
-    icon: "🖱️",
-    tagline: "Agentic desktop automation",
-    tags: ["Python", "MCP", "Agentic AI"],
-    repo: "https://github.com/Namdevv/claude-mouse-mcp",
-    demo: "",
-    description:
-      "An MCP server that lets Claude see the screen and control the mouse & keyboard on Windows.\n" +
-      "It turns a language model into a hands-on desktop agent — useful for automation, testing, and accessibility.",
-    images: [] // e.g. ["assets/projects/claude-mouse/demo.png"]
+    role: "AI Architect",
+    org: "DFM Engineering",
+    date: "Jan 2026 — Present",
+    product: "Agentic AI for 3D CAD Automation",
+    tags: ["Agentic AI", "Architecture", "Business Analysis"],
+    points: [
+      "Gathered business requirements across departments and designed a comprehensive integration architecture unifying multi-platform data flows into a single admin console.",
+      "Modeled end-to-end workflows and decomposed technical scope into concrete software requirements — cutting operational time by 40%.",
+      "Partnered with PM and domain engineers on test scenarios, UAT, and hands-on technical support through delivery."
+    ],
+    images: [] // e.g. ["assets/experience/dfm/console.png"]
   },
   {
-    title: "finos_hotel",
-    icon: "🏨",
-    tagline: "Handwritten ledgers → web system",
-    tags: ["OCR", "LLM", "Web"],
-    repo: "https://github.com/Namdevv/finos_hotel",
-    demo: "",
-    description:
-      "Digitizes handwritten hotel ledgers into a clean, searchable web-based management system.\n" +
-      "Combines OCR with an LLM to extract, structure, and validate data that used to live only on paper.",
+    role: "Project Manager / AI",
+    org: "FPT University",
+    date: "Sep 2025 — Dec 2025",
+    product: "Agent Programmatic Integration Testing",
+    tags: ["Project Management", "Tool-calling", "API"],
+    points: [
+      "Owned delivery progress and output quality; the single point of contact translating system requirements and status to stakeholders (PM, Dev, QC).",
+      "Designed the tool-calling architecture and API integration flow, automating data aggregation and reducing manual-operation errors by 90%."
+    ],
     images: []
   },
   {
-    title: "Hazard Detection",
-    icon: "⚠️",
-    tagline: "Real-time industrial safety CV",
-    tags: ["YOLO", "OpenCV", "Real-time"],
-    repo: "https://github.com/Namdevv",
-    demo: "",
-    description:
-      "A real-time computer-vision system that spots dangerous items for safety monitoring at a maritime port.\n" +
-      "Built and shipped end to end as AI team lead — from on-site data pipeline design to deployment and incident handling.",
+    role: "AI Team Lead",
+    org: "CEH — Vietnam Maritime Port Solutions",
+    date: "Jan 2025 — Apr 2025",
+    product: "Hazard Detection System",
+    tags: ["Computer Vision", "Real-time", "Team Lead"],
+    points: [
+      "Designed a real-time image/video data-collection pipeline for safety monitoring in complex industrial environments.",
+      "Surveyed the site, clarified real-world requirements, configured and trialed the system, and validated input/output accuracy before handover.",
+      "Handled technical incidents to keep data collection running reliably under all conditions."
+    ],
     images: []
   },
   {
-    title: "Traffic Sign Recognition",
-    icon: "🚦",
-    tagline: "LoRA fine-tuning · 2nd Prize 🏆",
-    tags: ["LoRA", "Deep Learning", "Award"],
-    repo: "https://github.com/Namdevv",
-    demo: "",
-    description:
-      "Traffic-sign recognition fine-tuned with LoRA on large real-world datasets.\n" +
-      "Won 2nd Prize at a university-level scientific research competition for its practicality and deployability.",
-    images: []
-  },
-  {
-    title: "FocusPals",
-    icon: "🐾",
-    tagline: "Pomodoro with an AI pet",
-    tags: ["AI Agent", "App"],
-    repo: "https://github.com/Namdevv/FocusPals",
-    demo: "",
-    description:
-      "A Pomodoro timer with an AI agent pet that keeps you company and gently nudges you to stay on task.",
-    images: []
-  },
-  {
-    title: "Web Deploy Series",
-    icon: "🚀",
-    tagline: "VPS · Nginx · HTTPS guide",
-    tags: ["Nginx", "DevOps", "VPS"],
-    repo: "https://github.com/Namdevv/Web-deploy-series",
-    demo: "",
-    description:
-      "A practical, hands-on guide to deploying web apps on a VPS — Nginx reverse proxy, HTTPS, and going from zero to production.",
+    role: "AI Engineer",
+    org: "University of Transport HCMC",
+    date: "Apr 2024 — Apr 2025",
+    product: "Traffic Sign Recognition with LoRA",
+    tags: ["LoRA", "Deep Learning", "Award 🏆"],
+    points: [
+      "Collected, cleaned, and analyzed large datasets to optimize real-world recognition.",
+      "Applied optimization techniques to push model accuracy well above baseline.",
+      "🏆 2nd Prize, university-level Scientific Research competition."
+    ],
     images: []
   }
 ];
@@ -98,19 +79,23 @@ var PROJECTS = [
   var yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-  /* ---- Render project cards (compact: name only) ---- */
-  var grid = document.getElementById("projects-grid");
-  if (grid) {
-    grid.innerHTML = PROJECTS.map(function (p, i) {
+  /* ---- Render experience timeline (compact: role + company only) ---- */
+  var list = document.getElementById("experience-list");
+  if (list) {
+    list.innerHTML = EXPERIENCE.map(function (x, i) {
       return (
-        '<button class="project reveal" data-i="' + i + '" type="button">' +
-          '<div class="project__top">' +
-            '<span class="project__icon">' + p.icon + "</span>" +
-            '<span class="project__more">View details <span aria-hidden="true">→</span></span>' +
-          "</div>" +
-          "<h3>" + esc(p.title) + "</h3>" +
-          '<p class="project__tagline">' + esc(p.tagline) + "</p>" +
-        "</button>"
+        '<article class="tl reveal">' +
+          '<div class="tl__dot"></div>' +
+          '<button class="tl__body tl__body--btn" data-i="' + i + '" type="button">' +
+            '<div class="tl__head">' +
+              "<h3>" + esc(x.role) + "</h3>" +
+              '<span class="tl__date">' + esc(x.date) + "</span>" +
+            "</div>" +
+            '<p class="tl__org">' + esc(x.org) +
+              (x.product ? " · <em>" + esc(x.product) + "</em>" : "") + "</p>" +
+            '<span class="tl__more">View details <span aria-hidden="true">→</span></span>' +
+          "</button>" +
+        "</article>"
       );
     }).join("");
   }
@@ -121,38 +106,32 @@ var PROJECTS = [
   var lastFocused = null;
 
   function openModal(i) {
-    var p = PROJECTS[i];
-    if (!p) return;
+    var x = EXPERIENCE[i];
+    if (!x) return;
 
-    var tags = (p.tags || []).map(function (t) { return "<span>" + esc(t) + "</span>"; }).join("");
-    var paras = String(p.description).split("\n").map(function (line) {
-      return line.trim() ? "<p>" + esc(line) + "</p>" : "";
-    }).join("");
+    var tags = (x.tags || []).map(function (t) { return "<span>" + esc(t) + "</span>"; }).join("");
+    var points = (x.points || []).map(function (p) { return "<li>" + esc(p) + "</li>"; }).join("");
 
     var gallery;
-    if (p.images && p.images.length) {
-      gallery = '<div class="modal__gallery">' + p.images.map(function (src) {
+    if (x.images && x.images.length) {
+      gallery = '<div class="modal__gallery">' + x.images.map(function (src) {
         return '<a class="modal__shot" href="' + esc(src) + '" target="_blank" rel="noopener">' +
-               '<img src="' + esc(src) + '" alt="' + esc(p.title) + ' screenshot" loading="lazy" ' +
+               '<img src="' + esc(src) + '" alt="' + esc(x.role) + ' at ' + esc(x.org) + '" loading="lazy" ' +
                "onerror=\"this.closest('.modal__shot').style.display='none'\" /></a>";
       }).join("") + "</div>";
     } else {
       gallery = '<div class="modal__empty">🖼️ More visuals coming soon.</div>';
     }
 
-    var links = "";
-    if (p.repo) links += '<a class="btn btn--primary btn--sm" href="' + esc(p.repo) + '" target="_blank" rel="noopener">View code <span aria-hidden="true">↗</span></a>';
-    if (p.demo) links += '<a class="btn btn--ghost btn--sm" href="' + esc(p.demo) + '" target="_blank" rel="noopener">Live demo <span aria-hidden="true">↗</span></a>';
-
     modalInner.innerHTML =
       '<div class="modal__head">' +
-        '<span class="modal__icon">' + p.icon + "</span>" +
-        "<div><h2 id=\"modal-title\">" + esc(p.title) + "</h2>" +
+        "<div><h2 id=\"modal-title\">" + esc(x.role) + "</h2>" +
+        '<p class="modal__org">' + esc(x.org) + ' · <span>' + esc(x.date) + "</span></p>" +
+        (x.product ? '<p class="modal__product">' + esc(x.product) + "</p>" : "") +
         '<div class="tags tags--sm">' + tags + "</div></div>" +
       "</div>" +
-      '<div class="modal__desc">' + paras + "</div>" +
-      gallery +
-      (links ? '<div class="modal__links">' + links + "</div>" : "");
+      '<ul class="modal__points">' + points + "</ul>" +
+      gallery;
 
     lastFocused = document.activeElement;
     modal.classList.add("open");
@@ -170,9 +149,9 @@ var PROJECTS = [
     if (lastFocused && lastFocused.focus) lastFocused.focus();
   }
 
-  if (grid) {
-    grid.addEventListener("click", function (e) {
-      var card = e.target.closest(".project");
+  if (list) {
+    list.addEventListener("click", function (e) {
+      var card = e.target.closest(".tl__body--btn");
       if (card) openModal(parseInt(card.getAttribute("data-i"), 10));
     });
   }

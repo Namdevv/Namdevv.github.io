@@ -157,72 +157,8 @@
         <span class="section__index">02</span>
         <h2 class="section__title">Experience</h2>
       </div>
-      <div class="timeline">
-
-        <article class="tl reveal">
-          <div class="tl__dot"></div>
-          <div class="tl__body">
-            <div class="tl__head">
-              <h3>AI Architect</h3>
-              <span class="tl__date">Jan 2026 — Present</span>
-            </div>
-            <p class="tl__org">DFM Engineering · <em>Agentic AI for 3D CAD Automation</em></p>
-            <ul class="tl__points">
-              <li>Gathered business requirements across departments and designed a comprehensive integration architecture unifying multi-platform data flows into a single admin console.</li>
-              <li>Modeled end-to-end workflows and decomposed technical scope into concrete software requirements — cutting operational time by <strong>40%</strong>.</li>
-              <li>Partnered with PM and domain engineers on test scenarios, UAT, and hands-on technical support through delivery.</li>
-            </ul>
-          </div>
-        </article>
-
-        <article class="tl reveal">
-          <div class="tl__dot"></div>
-          <div class="tl__body">
-            <div class="tl__head">
-              <h3>Project Manager / AI</h3>
-              <span class="tl__date">Sep 2025 — Dec 2025</span>
-            </div>
-            <p class="tl__org">FPT University · <em>Agent Programmatic Integration Testing</em></p>
-            <ul class="tl__points">
-              <li>Owned delivery progress and output quality; the single point of contact translating system requirements and status to stakeholders (PM, Dev, QC).</li>
-              <li>Designed the tool-calling architecture and API integration flow, automating data aggregation and reducing manual-operation errors by <strong>90%</strong>.</li>
-            </ul>
-          </div>
-        </article>
-
-        <article class="tl reveal">
-          <div class="tl__dot"></div>
-          <div class="tl__body">
-            <div class="tl__head">
-              <h3>AI Team Lead</h3>
-              <span class="tl__date">Jan 2025 — Apr 2025</span>
-            </div>
-            <p class="tl__org">CEH — Vietnam Maritime Port Solutions · <em>Hazard Detection System</em></p>
-            <ul class="tl__points">
-              <li>Designed a real-time image/video data-collection pipeline for safety monitoring in complex industrial environments.</li>
-              <li>Surveyed the site, clarified real-world requirements, configured and trialed the system, and validated input/output accuracy before handover.</li>
-              <li>Handled technical incidents to keep data collection running reliably under all conditions.</li>
-            </ul>
-          </div>
-        </article>
-
-        <article class="tl reveal">
-          <div class="tl__dot"></div>
-          <div class="tl__body">
-            <div class="tl__head">
-              <h3>AI Engineer</h3>
-              <span class="tl__date">Apr 2024 — Apr 2025</span>
-            </div>
-            <p class="tl__org">University of Transport HCMC · <em>Traffic Sign Recognition with LoRA</em></p>
-            <ul class="tl__points">
-              <li>Collected, cleaned, and analyzed large datasets to optimize real-world recognition.</li>
-              <li>Applied optimization techniques to push model accuracy well above baseline.</li>
-              <li>🏆 <strong>2nd Prize</strong>, university-level Scientific Research competition.</li>
-            </ul>
-          </div>
-        </article>
-
-      </div>
+      <!-- Entries are generated from the EXPERIENCE array in script.js -->
+      <div class="timeline" id="experience-list"></div>
     </section>
 
     <!-- Skills -->
@@ -272,8 +208,69 @@
         <span class="section__index">04</span>
         <h2 class="section__title">Featured projects</h2>
       </div>
-      <!-- Cards are generated from the PROJECTS array in script.js -->
-      <div class="projects" id="projects-grid"></div>
+      <div class="projects">
+
+        <a class="project reveal" href="https://github.com/Namdevv/claude-mouse-mcp" target="_blank" rel="noopener">
+          <div class="project__top">
+            <span class="project__icon">🖱️</span>
+            <span class="project__arrow" aria-hidden="true">↗</span>
+          </div>
+          <h3>claude-mouse-mcp</h3>
+          <p>An MCP server that lets Claude see the screen and control mouse &amp; keyboard on Windows — agentic desktop automation.</p>
+          <div class="tags tags--sm"><span>Python</span><span>MCP</span><span>Agentic AI</span></div>
+        </a>
+
+        <a class="project reveal" href="https://github.com/Namdevv/finos_hotel" target="_blank" rel="noopener">
+          <div class="project__top">
+            <span class="project__icon">🏨</span>
+            <span class="project__arrow" aria-hidden="true">↗</span>
+          </div>
+          <h3>finos_hotel</h3>
+          <p>Digitizes handwritten hotel ledgers into a clean web-based management system using OCR and AI.</p>
+          <div class="tags tags--sm"><span>OCR</span><span>LLM</span><span>Web</span></div>
+        </a>
+
+        <a class="project reveal" href="https://github.com/Namdevv" target="_blank" rel="noopener">
+          <div class="project__top">
+            <span class="project__icon">⚠️</span>
+            <span class="project__arrow" aria-hidden="true">↗</span>
+          </div>
+          <h3>Hazard Detection</h3>
+          <p>Real-time CV system spotting dangerous items for industrial safety monitoring at a maritime port — shipped end to end.</p>
+          <div class="tags tags--sm"><span>YOLO</span><span>OpenCV</span><span>Real-time</span></div>
+        </a>
+
+        <a class="project reveal" href="https://github.com/Namdevv" target="_blank" rel="noopener">
+          <div class="project__top">
+            <span class="project__icon">🚦</span>
+            <span class="project__arrow" aria-hidden="true">↗</span>
+          </div>
+          <h3>Traffic Sign Recognition</h3>
+          <p>Fine-tuned recognition with LoRA on large datasets — 2nd Prize at a university scientific research competition.</p>
+          <div class="tags tags--sm"><span>LoRA</span><span>Deep Learning</span><span>Award 🏆</span></div>
+        </a>
+
+        <a class="project reveal" href="https://github.com/Namdevv/FocusPals" target="_blank" rel="noopener">
+          <div class="project__top">
+            <span class="project__icon">🐾</span>
+            <span class="project__arrow" aria-hidden="true">↗</span>
+          </div>
+          <h3>FocusPals</h3>
+          <p>A Pomodoro timer with an AI agent pet that keeps you company and on task while you work.</p>
+          <div class="tags tags--sm"><span>AI Agent</span><span>App</span></div>
+        </a>
+
+        <a class="project reveal" href="https://github.com/Namdevv/Web-deploy-series" target="_blank" rel="noopener">
+          <div class="project__top">
+            <span class="project__icon">🚀</span>
+            <span class="project__arrow" aria-hidden="true">↗</span>
+          </div>
+          <h3>Web Deploy Series</h3>
+          <p>A practical guide to deploying apps on a VPS with Nginx and HTTPS — from zero to production.</p>
+          <div class="tags tags--sm"><span>Nginx</span><span>DevOps</span><span>VPS</span></div>
+        </a>
+
+      </div>
       <div class="projects__more reveal">
         <a href="https://github.com/Namdevv?tab=repositories" target="_blank" rel="noopener" class="btn btn--ghost">
           See all 26 repositories <span aria-hidden="true">↗</span>

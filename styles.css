@@ -212,19 +212,16 @@ strong { color: var(--text); font-weight: 600; }
 
 /* ---------- Projects ---------- */
 .projects { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
-.project { display: flex; flex-direction: column; padding: 26px; border: 1px solid var(--border); border-radius: 18px; background: var(--surface); position: relative; overflow: hidden; cursor: pointer; text-align: left; width: 100%; font: inherit; color: inherit; -webkit-appearance: none; appearance: none; transition: transform .3s var(--ease), border-color .3s; }
+.project { display: flex; flex-direction: column; padding: 26px; border: 1px solid var(--border); border-radius: 18px; background: var(--surface); position: relative; overflow: hidden; transition: transform .3s var(--ease), border-color .3s; }
 .project::before { content: ""; position: absolute; inset: 0; background: radial-gradient(400px circle at var(--mx,50%) var(--my,0%), rgba(34,211,238,0.10), transparent 45%); opacity: 0; transition: opacity .3s; }
 .project:hover { transform: translateY(-6px); border-color: var(--border-2); }
 .project:hover::before { opacity: 1; }
-.project:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 .project__top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 18px; }
 .project__icon { font-size: 1.8rem; }
-.project__more { font-size: 0.82rem; font-weight: 600; color: var(--text-mute); transition: color .25s; }
-.project__more span { display: inline-block; transition: transform .25s var(--ease); }
-.project:hover .project__more { color: var(--accent); }
-.project:hover .project__more span { transform: translateX(4px); }
-.project h3 { font-family: var(--display); font-size: 1.2rem; margin-bottom: 6px; letter-spacing: -0.01em; }
-.project__tagline { color: var(--text-dim); font-size: 0.9rem; }
+.project__arrow { color: var(--text-mute); font-size: 1.2rem; transition: transform .25s var(--ease), color .25s; }
+.project:hover .project__arrow { transform: translate(3px, -3px); color: var(--accent); }
+.project h3 { font-family: var(--display); font-size: 1.18rem; margin-bottom: 10px; letter-spacing: -0.01em; }
+.project p { color: var(--text-dim); font-size: 0.92rem; margin-bottom: 18px; flex: 1; }
 .projects__more { text-align: center; margin-top: 40px; }
 
 /* ---------- Project modal ---------- */
@@ -237,6 +234,12 @@ strong { color: var(--text); font-weight: 600; }
 .modal__head { display: flex; align-items: center; gap: 16px; margin-bottom: 22px; padding-right: 40px; }
 .modal__icon { font-size: 2.4rem; }
 .modal__head h2 { font-family: var(--display); font-size: clamp(1.4rem, 3.5vw, 1.9rem); letter-spacing: -0.02em; margin-bottom: 8px; }
+.modal__org { color: var(--text-dim); font-size: 0.95rem; margin-bottom: 4px; }
+.modal__org span { font-family: var(--mono); color: var(--accent); font-size: 0.84rem; }
+.modal__product { color: var(--text); font-style: italic; margin-bottom: 12px; }
+.modal__points { list-style: none; display: grid; gap: 11px; margin-top: 22px; }
+.modal__points li { position: relative; padding-left: 22px; color: var(--text-dim); font-size: 0.95rem; }
+.modal__points li::before { content: "▹"; position: absolute; left: 0; color: var(--accent-2); }
 .modal__desc p { color: var(--text-dim); margin-bottom: 12px; }
 .modal__gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; margin-top: 22px; }
 .modal__shot { display: block; border-radius: 12px; overflow: hidden; border: 1px solid var(--border); transition: transform .25s var(--ease), border-color .25s; }
@@ -263,6 +266,12 @@ strong { color: var(--text); font-weight: 600; }
 .tl__points { list-style: none; display: grid; gap: 9px; }
 .tl__points li { position: relative; padding-left: 20px; color: var(--text-dim); font-size: 0.93rem; }
 .tl__points li::before { content: "▹"; position: absolute; left: 0; color: var(--accent-2); }
+.tl__body--btn { display: block; width: 100%; text-align: left; font: inherit; color: inherit; cursor: pointer; -webkit-appearance: none; appearance: none; }
+.tl__body--btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.tl__more { display: inline-flex; align-items: center; gap: 6px; margin-top: 4px; font-size: 0.84rem; font-weight: 600; color: var(--text-mute); transition: color .25s; }
+.tl__more span { display: inline-block; transition: transform .25s var(--ease); }
+.tl__body--btn:hover .tl__more { color: var(--accent); }
+.tl__body--btn:hover .tl__more span { transform: translateX(4px); }
 
 /* ---------- Education ---------- */
 .edu { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
