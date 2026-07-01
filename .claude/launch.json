@@ -4,8 +4,9 @@
     {
       "name": "portfolio",
       "runtimeExecutable": "python",
-      "runtimeArgs": ["-m", "http.server", "8000"],
-      "port": 8000
+      "runtimeArgs": ["-m", "http.server", "8123"],
+      "port": 8123,
+      "autoPort": true
     }
   ]
 }
