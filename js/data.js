@@ -16,48 +16,58 @@ var EXPERIENCE = [
     org: "DFM Engineering",
     date: "Jan 2026 — Present",
     product: "Agentic AI for 3D CAD Automation",
-    tags: ["Agentic AI", "Architecture", "Business Analysis"],
+    tags: ["Agentic AI", "Multi-agent", "CAD Automation"],
     points: [
-      "Gathered business requirements across departments and designed a comprehensive integration architecture unifying multi-platform data flows into a single admin console.",
-      "Modeled end-to-end workflows and decomposed technical scope into concrete software requirements — cutting operational time by 40%.",
-      "Partnered with PM and domain engineers on test scenarios, UAT, and hands-on technical support through delivery."
+      "Designed an agentic AI and multi-agent system for interactive drawing generation across CAD platforms such as FreeCAD, Solid Edge, and SolidWorks.",
+      "Owned system ideation and solution design, translating ambiguous engineering challenges into practical architecture, workflows, and implementation directions.",
+      "Gathered business and technical requirements across departments, then decomposed them into concrete software requirements and delivery milestones.",
+      "Led the project end to end, coordinating with PMs, developers, and domain engineers to ensure output quality, test coverage, UAT readiness, and hands-on technical support through delivery."
     ],
-    images: [] // e.g. ["assets/experience/dfm/console.png"]
+    images: ["assets/experience/dfm/DFM.png"]
   },
   {
     role: "Project Manager / AI",
     org: "FPT University",
     date: "Sep 2025 — Dec 2025",
     product: "Agent Programmatic Integration Testing",
-    tags: ["Project Management", "Tool-calling", "API"],
+    tags: ["SLM", "Qwen 3B", "LLM Evaluation"],
     points: [
-      "Owned delivery progress and output quality; the single point of contact translating system requirements and status to stakeholders (PM, Dev, QC).",
+      "Led the project delivery and output quality as the main bridge between PM, Dev, and QC teams, translating requirements into clear technical tasks and validation criteria.",
+      "Designed a data extraction and distillation workflow from larger language models to build high-quality training data for a small language model focused on programmatic integration testing.",
+      "Trained and refined a Qwen 3B SLM to perform task reasoning, API/tool-use planning, and structured test-generation workflows, reaching roughly 70% of the performance level of commercial LLM baselines.",
+      "Applied advanced evaluation methods including LLM-as-a-judge, rubric-based scoring, and comparative model review to measure reasoning quality, output consistency, and practical usability.",
       "Designed the tool-calling architecture and API integration flow, automating data aggregation and reducing manual-operation errors by 90%."
     ],
-    images: []
+    images: ["assets/experience/apit/agenttesting.png"]
   },
   {
     role: "AI Team Lead",
     org: "CEH — Vietnam Maritime Port Solutions",
     date: "Jan 2025 — Apr 2025",
     product: "Hazard Detection System",
-    tags: ["Computer Vision", "Real-time", "Team Lead"],
+    tags: ["YOLOv8", "RAG", "Real-time CV"],
     points: [
-      "Designed a real-time image/video data-collection pipeline for safety monitoring in complex industrial environments.",
-      "Surveyed the site, clarified real-world requirements, configured and trialed the system, and validated input/output accuracy before handover.",
-      "Handled technical incidents to keep data collection running reliably under all conditions."
+      "Led the AI team in designing a real-time hazardous-material detection system for container yard safety monitoring and automated container classification.",
+      "Built the camera-feed and preprocessing pipeline for live video acquisition, frame normalization, color correction, and reliable image input under industrial conditions.",
+      "Applied YOLOv8-based real-time inference to detect hazardous material signs and classify hazard groups such as flammable, corrosive, radioactive, and liquid material categories.",
+      "Designed a RAG and LLM-powered classification layer that retrieved safety metadata, contextualized detection results, and supported more accurate hazard-class decisions.",
+      "Integrated detection outputs with reporting and yard-operation workflows, including container logs, summary reports, routing suggestions, and database updates for operational follow-up.",
+      "Surveyed the site, clarified real-world requirements, configured and trialed the system, validated input/output accuracy, and handled technical incidents through handover."
     ],
-    images: []
+    images: ["assets/experience/ceh/CEH.png"]
   },
   {
     role: "AI Engineer",
     org: "University of Transport HCMC",
     date: "Apr 2024 — Apr 2025",
     product: "Traffic Sign Recognition with LoRA",
-    tags: ["LoRA", "Deep Learning", "Award 🏆"],
+    tags: ["LoRA", "Stable Diffusion", "Synthetic Data"],
     points: [
-      "Collected, cleaned, and analyzed large datasets to optimize real-world recognition.",
-      "Applied optimization techniques to push model accuracy well above baseline.",
+      "Collected, cleaned, and analyzed traffic-sign datasets to understand class distribution, image quality, and real-world recognition challenges.",
+      "Applied LoRA fine-tuning in Stable Diffusion to generate additional traffic-sign images from prompts, expanding the dataset with diverse road scenes, lighting, weather, angle, distance, and occlusion cases.",
+      "Designed prompt strategies to make synthetic images realistic and useful for training, ensuring generated samples matched real-world visual conditions instead of looking purely artificial.",
+      "Used the augmented dataset to improve model robustness and recognition accuracy across rare classes and difficult scenarios.",
+      "Applied deep-learning optimization techniques to push recognition performance well above the baseline.",
       "🏆 2nd Prize, university-level Scientific Research competition."
     ],
     images: []

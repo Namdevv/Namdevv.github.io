@@ -51,7 +51,7 @@
 
     var gallery;
     if (x.images && x.images.length) {
-      gallery = '<div class="modal__gallery">' + x.images.map(function (src) {
+      gallery = '<div class="modal__gallery' + (x.images.length === 1 ? ' modal__gallery--single' : '') + '">' + x.images.map(function (src) {
         return '<a class="modal__shot" href="' + esc(src) + '" target="_blank" rel="noopener">' +
                '<img src="' + esc(src) + '" alt="' + esc(x.role) + ' at ' + esc(x.org) + '" loading="lazy" ' +
                "onerror=\"this.closest('.modal__shot').style.display='none'\" /></a>";
